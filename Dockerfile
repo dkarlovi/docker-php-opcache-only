@@ -4,7 +4,8 @@ RUN docker-php-ext-configure opcache --enable-opcache \
 RUN mkdir -p /var/cache/opcache
 COPY opcache.ini /usr/local/etc/php/conf.d/
 COPY *.php /app/
-RUN php -l /app/*.php
+RUN php -l /app/hello.php
+RUN php -l /app/world.php
 
 FROM php:8.2-cli-alpine
 RUN docker-php-ext-configure opcache --enable-opcache \

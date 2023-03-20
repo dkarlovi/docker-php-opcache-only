@@ -1,6 +1,6 @@
 # Try it
 
-This seems to work:
+This seems to work, thanks @LiamKearn for the hints!
 
 ```
 $ docker build . -t php-opcache-only --load

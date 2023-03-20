@@ -11,6 +11,7 @@ FROM php:8.2-cli-alpine
 RUN docker-php-ext-configure opcache --enable-opcache \
     && docker-php-ext-install opcache
 RUN apk add --no-cache procps strace
+RUN mkdir /app && touch /app/world.php
 COPY --from=builder /var/cache/opcache /var/cache/opcache
 COPY opcache.ini /usr/local/etc/php/conf.d/
 # note, no world.php

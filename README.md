@@ -3,6 +3,6 @@
 This should work, but doesn't.
 
 ```
-$ docker build . -t php-opcache-only --load
-$ docker run --rm -ti php-opcache-only
+$ docker build . --tag phpopt &&
+$ docker run --cap-add sys_admin --cap-add sys_ptrace phpopt
 ```
